@@ -63,7 +63,8 @@ public class Main {
                     Contact contact = contactManager.searchByNameContact(name);
                     endTime = System.currentTimeMillis();
                     tiempos.add(endTime - startTime);
-                    if (contact != null) { System.out.println("\nDatos del Contacto\n\n" + contact); }
+                    if (contact != null) { System.out.println("\nContacto Encontrado\n\n" + contact); }
+                    else { System.out.println("\nNo se encontró ningún contacto con el nombre: " + name); }
                     break;
                 case 4:
                     startTime = System.currentTimeMillis();

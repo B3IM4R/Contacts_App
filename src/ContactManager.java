@@ -14,7 +14,7 @@ public class ContactManager {
     // Método para Agregar un contacto
     public void addContact(Contact contact) {
         this.contacts.add(contact);
-        System.out.println("\nContacto Agregado: " + contact.getName());
+        System.out.println("\nContacto Agregado con Éxito: " + contact.getName());
     }
 
     // Método para Eliminar un contacto
@@ -22,7 +22,7 @@ public class ContactManager {
         Contact contactToRemove = searchByNameContact(name);
         if(contactToRemove != null){
             contacts.removeIf(contact -> contact.getName().equalsIgnoreCase(name));
-            System.out.println("\nContacto Eliminado con Éxito");
+            System.out.println("\nEl Contacto: " + name + " ha sido Eliminado con Éxito");
         } else { System.out.println("\nContacto No Encontrado"); }
     }
 
@@ -35,7 +35,7 @@ public class ContactManager {
 
     // Metodo para Listar Contactos
     public void listContacts(){
-        if(contacts.isEmpty()){ System.out.println("\nNo hay contactos para mostrar"); }
+        if(contacts.isEmpty()){ System.out.println("\nnActualmente no hay contactos almacenados"); }
         else { System.out.println("\nLista de Contactos\n---------------------------------");
             contacts.forEach(contact -> System.out.println(contact + "\n---------------------------------"));}
     }
