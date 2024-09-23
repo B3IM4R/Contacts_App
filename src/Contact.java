@@ -1,3 +1,5 @@
+package src;
+
 public class Contact {
     // Atributos
     private String name;
